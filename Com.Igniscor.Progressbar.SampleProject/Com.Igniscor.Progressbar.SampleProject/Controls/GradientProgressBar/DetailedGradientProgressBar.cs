@@ -2,7 +2,7 @@
 using System;
 using Xamarin.Forms;
 
-namespace TrashBox.Controls.GradientProgressBar
+namespace Com.Igniscor.Progressbar.SampleProject.Controls.GradientProgressBar
 {
     public class DetailedGradientProgressBar : GradientProgressBar
     {

@@ -2,7 +2,7 @@
 using System;
 using Xamarin.Forms;
 
-namespace TrashBox.Controls.GradientRadialProgressBar
+namespace Com.Igniscor.Progressbar.SampleProject.Controls.GradientRadialProgressBar
 {
     public class RadialProgressBar : SKCanvasView
     {

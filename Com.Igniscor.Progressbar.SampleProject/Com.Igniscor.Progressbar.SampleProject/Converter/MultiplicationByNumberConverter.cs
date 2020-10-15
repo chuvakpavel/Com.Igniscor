@@ -2,7 +2,7 @@
 using System.Globalization;
 using Xamarin.Forms;
 
-namespace TrashBox.Converters
+namespace Com.Igniscor.Progressbar.SampleProject.Converters
 {
     public class MultiplicationByNumberConverter : IValueConverter
     {

@@ -1,7 +1,7 @@
 ﻿using SkiaSharp;
 using System;
 
-namespace TrashBox.Controls.GradientRadialProgressBar
+namespace Com.Igniscor.Progressbar.SampleProject.Controls.GradientRadialProgressBar
 {
     public static class RadialProgressBarHelper
     {

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:converters="clr-namespace:TrashBox.Converters"
+             xmlns:converters="clr-namespace:Com.Igniscor.Progressbar.SampleProject.Converters"
              x:Class="Com.Igniscor.Progressbar.SampleProject.App">
     <Application.Resources>
         
