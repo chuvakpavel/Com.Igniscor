@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gradientProgressBar="clr-namespace:TrashBox.Controls.GradientProgressBar"
+             xmlns:viewmodels="clr-namespace:Com.Igniscor.Progressbar.SampleProject.ViewModels"
+             x:Class="Com.Igniscor.Progressbar.SampleProject.Views.GradientProgressBarSamplePage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:GradientProgressBarSampleViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray">
+            <Grid
+                    VerticalOptions="Center"
+                    Padding="10"
+                    RowSpacing="10">
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+
+                <gradientProgressBar:DetailedGradientProgressBar
+                        Orientation="Horizontal"
+                        PercentageValue="{Binding PercentageValue}"
+                        OuterCornerRadius="{Binding OuterCornerRadius}"
+                        InnerCornerRadius="{Binding InnerCornerRadius}"
+                        FontSize="{Binding FontSize}"
+                        PrimaryTextColor="Black"
+                        SecondaryTextColor="White"
+                        StartProgressColor="#E7FD8C"
+                        EndProgressColor="#91C035"
+                        StartBackgroundColor="#1D00FB"
+                        EndBackgroundColor="#FB0003"
+                        Grid.Row="0" />
+
+                <gradientProgressBar:GradientProgressBar
+                        Orientation="Horizontal"
+                        PercentageValue="{Binding PercentageValue}"
+                        OuterCornerRadius="{Binding OuterCornerRadius}"
+                        InnerCornerRadius="{Binding InnerCornerRadius}"
+                        StartProgressColor="#E7FD8C"
+                        EndProgressColor="#91C035"
+                        StartBackgroundColor="#1D00FB"
+                        EndBackgroundColor="#FB0003"
+                        Grid.Row="1" />
+            </Grid>
+
+            <Grid RowSpacing="10">
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0">
+                    <Label Text="PercentageValue"/>
+                    <Slider
+                        Value="{Binding PercentageValue}"
+                        Minimum="0"
+                        Maximum="1"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1">
+                    <Label Text="FontSize"/>
+                    <Slider
+                        Value="{Binding FontSize}"
+                        Minimum="0"
+                        Maximum="100"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2">
+                    <Label Text="OuterCornerRadius"/>
+                    <Slider
+                        Value="{Binding OuterCornerRadius}"
+                        Minimum="0"
+                        Maximum="100"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3">
+                    <Label Text="InnerCornerRadius"/>
+                    <Slider
+                        Value="{Binding InnerCornerRadius}"
+                        Minimum="0"
+                        Maximum="100"/>
+                </StackLayout>
+               
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

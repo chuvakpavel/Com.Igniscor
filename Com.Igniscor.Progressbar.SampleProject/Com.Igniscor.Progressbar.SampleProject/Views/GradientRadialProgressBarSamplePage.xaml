@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:gradientRadialProgressBar="clr-namespace:TrashBox.Controls.GradientRadialProgressBar"
+             xmlns:viewmodels="clr-namespace:Com.Igniscor.Progressbar.SampleProject.ViewModels"
+             xmlns:local="clr-namespace:Com.Igniscor.Progressbar.SampleProject"
+             x:Class="Com.Igniscor.Progressbar.SampleProject.Views.GradientRadialProgressBarSamplePage">
+    
+    <ContentPage.BindingContext>
+        <viewmodels:GradientRadialProgressBarSampleViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray">
+            <gradientRadialProgressBar:RadialProgressBar
+                    SweepAngle="{Binding SweepAngle}"
+                    StartAngle="{Binding StartAngle}"
+                    PercentageValue="{Binding PercentageValue}"
+                    BarWidth="{Binding BarWidth}"
+                    StartColor="#E7FD8C"
+                    EndColor="#91C035"
+                    StartBackgroundColor="#FB0003"
+                    EndBackgroundColor="#1D00FB"
+                    WidthRequest="{Binding Source={x:Static local:App.ScreenWidth}, 
+                                           Converter={StaticResource MultiplicationByNumberConverter}, 
+                                           ConverterParameter=0.8}"
+                    HeightRequest="{Binding Source={x:Static local:App.ScreenWidth}, 
+                                            Converter={StaticResource MultiplicationByNumberConverter}, 
+                                            ConverterParameter=0.8}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="10" />
+
+            <Grid RowSpacing="10">
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0">
+                    <Label Text="PercentageValue"/>
+                    <Slider
+                        Value="{Binding PercentageValue}"
+                        Minimum="0"
+                        Maximum="1"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1">
+                    <Label Text="BarWidth"/>
+                    <Slider
+                        Value="{Binding BarWidth}"
+                        Minimum="0"
+                        Maximum="{Binding Source={x:Static local:App.ScreenWidth}, 
+                                          Converter={StaticResource DivisionByNumberConverter}, 
+                                          ConverterParameter=2}"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="2">
+                    <Label Text="StartAngle"/>
+                    <Slider
+                        Value="{Binding StartAngle}"
+                        Minimum="0"
+                        Maximum="360"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3">
+                    <Label Text="SweepAngle"/>
+                    <Slider
+                        Value="{Binding SweepAngle}"
+                        Minimum="0"
+                        Maximum="360"/>
+                </StackLayout>
+
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
