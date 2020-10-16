@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:gradientProgressBar="clr-namespace:Com.Igniscor.Progressbar.SampleProject.Controls.GradientProgressBar"
-             xmlns:viewmodels="clr-namespace:Com.Igniscor.Progressbar.SampleProject.ViewModels"
-             x:Class="Com.Igniscor.Progressbar.SampleProject.Views.GradientProgressBarSamplePage">
+             xmlns:viewmodels="clr-namespace:Com.Igniscor.DevProject.ViewModels"
+             xmlns:gradientProgressBar="clr-namespace:Com.Igniscor.Controls.ProgressBar;assembly=Com.Igniscor.Controls"
+             x:Class="Com.Igniscor.DevProject.Views.GradientProgressBarSamplePage">
 
     <ContentPage.BindingContext>
         <viewmodels:GradientProgressBarSampleViewModel/>
@@ -17,10 +17,9 @@
                 <Grid.RowDefinitions>
 
                     <RowDefinition Height="100" />
-                    <RowDefinition Height="100" />
                 </Grid.RowDefinitions>
 
-                <gradientProgressBar:DetailedGradientProgressBar
+                <gradientProgressBar:DetailedProgressBar
                         Orientation="Horizontal"
                         PercentageValue="{Binding PercentageValue}"
                         OuterCornerRadius="{Binding OuterCornerRadius}"
@@ -33,17 +32,6 @@
                         StartBackgroundColor="#1D00FB"
                         EndBackgroundColor="#FB0003"
                         Grid.Row="0" />
-
-                <gradientProgressBar:GradientProgressBar
-                        Orientation="Horizontal"
-                        PercentageValue="{Binding PercentageValue}"
-                        OuterCornerRadius="{Binding OuterCornerRadius}"
-                        InnerCornerRadius="{Binding InnerCornerRadius}"
-                        StartProgressColor="#E7FD8C"
-                        EndProgressColor="#91C035"
-                        StartBackgroundColor="#1D00FB"
-                        EndBackgroundColor="#FB0003"
-                        Grid.Row="1" />
             </Grid>
 
             <Grid RowSpacing="10">

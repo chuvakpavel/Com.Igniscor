@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:converters="clr-namespace:Com.Igniscor.Progressbar.SampleProject.Converters"
-             x:Class="Com.Igniscor.Progressbar.SampleProject.App">
+             xmlns:converters="clr-namespace:Com.Igniscor.DevProject.Converters"
+             x:Class="Com.Igniscor.DevProject.App">
     <Application.Resources>
         
         <converters:MultiplicationByNumberConverter x:Key="MultiplicationByNumberConverter" />

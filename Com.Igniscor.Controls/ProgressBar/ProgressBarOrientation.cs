@@ -1,4 +1,4 @@
-﻿namespace Com.Igniscor.Progressbar.SampleProject.Controls.GradientProgressBar
+﻿namespace Com.Igniscor.Controls.ProgressBar
 {
     public enum ProgressBarOrientation
     {

@@ -1,4 +1,4 @@
-﻿using Com.Igniscor.Progressbar.SampleProject.Views;
+﻿using Com.Igniscor.DevProject.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace Com.Igniscor.Progressbar.SampleProject
+namespace Com.Igniscor.DevProject
 {
     public partial class MainPage : ContentPage
     {

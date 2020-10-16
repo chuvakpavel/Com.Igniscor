@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Com.Igniscor.Progressbar.SampleProject.ViewModels
+namespace Com.Igniscor.DevProject.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

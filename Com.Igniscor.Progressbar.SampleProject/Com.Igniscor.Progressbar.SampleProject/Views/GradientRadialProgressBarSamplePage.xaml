@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:gradientRadialProgressBar="clr-namespace:Com.Igniscor.Progressbar.SampleProject.Controls.GradientRadialProgressBar"
-             xmlns:viewmodels="clr-namespace:Com.Igniscor.Progressbar.SampleProject.ViewModels"
-             xmlns:local="clr-namespace:Com.Igniscor.Progressbar.SampleProject"
-             x:Class="Com.Igniscor.Progressbar.SampleProject.Views.GradientRadialProgressBarSamplePage">
+             xmlns:viewmodels="clr-namespace:Com.Igniscor.DevProject.ViewModels"
+             xmlns:local="clr-namespace:Com.Igniscor.DevProject"
+             xmlns:gradientRadialProgressBar="clr-namespace:Com.Controls.RadialProgressBar;assembly=Com.Igniscor.Controls"
+             x:Class="Com.Igniscor.DevProject.Views.GradientRadialProgressBarSamplePage">
     
     <ContentPage.BindingContext>
         <viewmodels:GradientRadialProgressBarSampleViewModel/>

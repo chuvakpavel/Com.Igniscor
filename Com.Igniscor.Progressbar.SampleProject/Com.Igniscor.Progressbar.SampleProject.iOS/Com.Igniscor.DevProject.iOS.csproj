@@ -131,9 +131,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Com.Igniscor.Progressbar.SampleProject\Com.Igniscor.Progressbar.SampleProject.csproj">
-      <Project>{C50D68E9-C377-48AC-9A91-E96A7B63F58F}</Project>
-      <Name>Com.Igniscor.Progressbar.SampleProject</Name>
+    <ProjectReference Include="..\Com.Igniscor.Progressbar.SampleProject\Com.Igniscor.DevProject.csproj">
+      <Project>{81F9B4B6-7656-4066-986F-1DC285505A36}</Project>
+      <Name>Com.Igniscor.DevProject</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

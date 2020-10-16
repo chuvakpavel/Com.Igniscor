@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Com.Igniscor.Progressbar.SampleProject.iOS
+namespace Com.Igniscor.DevProject.iOS
 {
     public class Application
     {

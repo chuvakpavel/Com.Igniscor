@@ -1,10 +1,9 @@
-﻿using Com.Igniscor.Progressbar.SampleProject.Views;
-using System;
+﻿using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Com.Igniscor.Progressbar.SampleProject
+namespace Com.Igniscor.DevProject
 {
     public partial class App : Application
     {
