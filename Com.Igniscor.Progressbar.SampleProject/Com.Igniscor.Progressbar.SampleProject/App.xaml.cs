@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Com.Igniscor.Controls.Helpers;
+using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,6 +15,8 @@ namespace Com.Igniscor.DevProject
         public App()
         {
             InitializeComponent();
+
+            Com.Igniscor.Controls.Services.InitializeService.Init(this);
 
             ScreenWidth = DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density;
             ScreenHeight = DeviceDisplay.MainDisplayInfo.Height / DeviceDisplay.MainDisplayInfo.Density;

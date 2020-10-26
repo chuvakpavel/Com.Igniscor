@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace Com.Igniscor.Controls.ProgressBar
 { 
-    public class DetailedProgressBar : SKCanvasView
+    public partial class DetailedProgressBar : SKCanvasView
     {
         #region Bindable Properties
 
@@ -282,14 +282,13 @@ namespace Com.Igniscor.Controls.ProgressBar
 
             SetClip(canvas, info, outerCornerRadius);
 
-            DrawBackground(canvas, Orientation, e.Info, outerCornerRadius,
-                StartBackgroundColor.ToSKColor(), EndBackgroundColor.ToSKColor());
-            DrawProgress(canvas, Orientation, e.Info, percentageWidth,
-                innerCornerRadius, StartProgressColor.ToSKColor(), EndProgressColor.ToSKColor());
-
             var textSize = FontSize * scale;
 
-            DrawText(canvas, Orientation, e.Info, percentageWidth, textSize,
+            DrawBackground(canvas, Orientation, ProgressTextPositionVertical, textSize, e.Info, outerCornerRadius,
+                StartBackgroundColor.ToSKColor(), EndBackgroundColor.ToSKColor());
+            DrawProgress(canvas, Orientation, ProgressTextPositionVertical, textSize, e.Info, percentageWidth,
+                innerCornerRadius, StartProgressColor.ToSKColor(), EndProgressColor.ToSKColor());
+            DrawTextWithPosition(canvas, Orientation,ProgressTextPosition,ProgressTextPositionVertical,FontName, e.Info, percentageWidth, textSize,
                 PercentageValue, StringFormat, PrimaryTextColor.ToSKColor(), SecondaryTextColor.ToSKColor());
         }
 
