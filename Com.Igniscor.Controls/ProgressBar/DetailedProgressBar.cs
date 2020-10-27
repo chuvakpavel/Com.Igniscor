@@ -280,14 +280,19 @@ namespace Com.Igniscor.Controls.ProgressBar
             var outerCornerRadius = OuterCornerRadius * scale;
             var innerCornerRadius = InnerCornerRadius * scale;
 
-            SetClip(canvas, info, outerCornerRadius);
+            canvas.Save();
+            SKPath clipPath = new SKPath();
 
             var textSize = FontSize * scale;
 
-            DrawBackground(canvas, Orientation, ProgressTextPositionVertical, textSize, e.Info, outerCornerRadius,
+            DrawBackground(canvas,clipPath, Orientation, ProgressTextPositionVertical, textSize, e.Info, outerCornerRadius,
                 StartBackgroundColor.ToSKColor(), EndBackgroundColor.ToSKColor());
+            SetClip(canvas,clipPath);
+
             DrawProgress(canvas, Orientation, ProgressTextPositionVertical, textSize, e.Info, percentageWidth,
                 innerCornerRadius, StartProgressColor.ToSKColor(), EndProgressColor.ToSKColor());
+
+            canvas.Restore();
             DrawTextWithPosition(canvas, Orientation,ProgressTextPosition,ProgressTextPositionVertical,FontName, e.Info, percentageWidth, textSize,
                 PercentageValue, StringFormat, PrimaryTextColor.ToSKColor(), SecondaryTextColor.ToSKColor());
         }

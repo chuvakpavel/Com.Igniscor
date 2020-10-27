@@ -200,7 +200,7 @@ namespace Com.Igniscor.Controls.ProgressBar
             canvas.DrawText(str, xText, yText, textPaint);
         }
 
-        internal static void DrawBackground(SKCanvas canvas, ProgressBarOrientation orientation, ProgressBarTextPositionVertical textPositionVertical, float textSize, SKImageInfo info,
+        internal static void DrawBackground(SKCanvas canvas,SKPath clipPath, ProgressBarOrientation orientation, ProgressBarTextPositionVertical textPositionVertical, float textSize, SKImageInfo info,
            float outerCornerRadius, SKColor startColor, SKColor endColor)
         {
             SKRoundRect backgroundBar;
@@ -209,7 +209,7 @@ namespace Com.Igniscor.Controls.ProgressBar
             {
                 case ProgressBarTextPositionVertical.Start:
                     {
-                        backgroundBar = CreateRoundRect(0, (int)(textSize + 5), info.Width, (int)(info.Height + textSize + 5), outerCornerRadius);
+                        backgroundBar = CreateRoundRect(0, (int)(textSize + 5), info.Width, info.Height, outerCornerRadius);
                         break;
                     }
                 case ProgressBarTextPositionVertical.Center:
@@ -258,6 +258,7 @@ namespace Com.Igniscor.Controls.ProgressBar
                     new float[] { 0, 1 }, SKShaderTileMode.Clamp)
             };
 
+            clipPath.AddRoundRect(backgroundBar);
             canvas.DrawRoundRect(backgroundBar, paint);
         }
 
@@ -276,7 +277,7 @@ namespace Com.Igniscor.Controls.ProgressBar
                         {
                             case ProgressBarTextPositionVertical.Start:
                                 {
-                                    progressBar = CreateRoundRect(0, (int)(textSize + 5),percentage, (int)(info.Height + textSize + 5), innerCornerRadius);
+                                    progressBar = CreateRoundRect(0, (int)(textSize + 5),percentage, info.Height, innerCornerRadius);
 
                                     break;
                                 }
@@ -322,6 +323,11 @@ namespace Com.Igniscor.Controls.ProgressBar
             };
 
             canvas.DrawRoundRect(progressBar, paint);
+        }
+
+        internal static void SetClip(SKCanvas canvas, SKPath clipPath)
+        {
+            canvas.ClipPath(clipPath, SKClipOperation.Intersect, true);
         }
 
         private static SKRoundRect CreateRoundRect(int left,int top,int right, int bottom, float cornerRadius) =>
