@@ -5,7 +5,6 @@
              x:Class="Com.Igniscor.DevProject.App">
     <Application.Resources>
         
-        <converters:MultiplicationByNumberConverter x:Key="MultiplicationByNumberConverter" />
         <converters:DivisionByNumberConverter x:Key="DivisionByNumberConverter" />
 
     </Application.Resources>

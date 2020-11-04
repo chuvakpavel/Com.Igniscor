@@ -21,12 +21,8 @@
                     EndColor="#91C035"
                     StartBackgroundColor="#FB0003"
                     EndBackgroundColor="#1D00FB"
-                    WidthRequest="{Binding Source={x:Static local:App.ScreenWidth}, 
-                                           Converter={StaticResource MultiplicationByNumberConverter}, 
-                                           ConverterParameter=0.8}"
-                    HeightRequest="{Binding Source={x:Static local:App.ScreenWidth}, 
-                                            Converter={StaticResource MultiplicationByNumberConverter}, 
-                                            ConverterParameter=0.8}"
+                    WidthRequest="350"
+                    HeightRequest="{Binding Source={RelativeSource Self}, Path=WidthRequest}"
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
                     Margin="10" />

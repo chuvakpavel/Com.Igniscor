@@ -1,6 +1,6 @@
 ﻿namespace Com.Igniscor.Controls.ProgressBar
 {
-    public enum ProgressBarTextPositionVertical
+    public enum ProgressBarTextOrientation
     {
         Start,
         Center,

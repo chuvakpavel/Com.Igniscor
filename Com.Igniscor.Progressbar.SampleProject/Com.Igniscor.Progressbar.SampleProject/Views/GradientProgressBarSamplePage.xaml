@@ -16,16 +16,23 @@
                     RowSpacing="10">
                 <Grid.RowDefinitions>
 
-                    <RowDefinition Height="100" />
+                    <RowDefinition Height="400" />
                 </Grid.RowDefinitions>
 
                 <gradientProgressBar:DetailedProgressBar
-                        Orientation="Horizontal"
+                    WidthRequest="100"
+                        HorizontalOptions="Center"
+                        VerticalOptions="FillAndExpand"
+                        Orientation="Vertical"
                         PercentageValue="{Binding PercentageValue}"
                         OuterCornerRadius="{Binding OuterCornerRadius}"
                         InnerCornerRadius="{Binding InnerCornerRadius}"
                         FontSize="{Binding FontSize}"
+                        BorderWidth="{Binding BorderWidth}"
+                        BorderColor="{Binding BorderColor}"
                         FontName="{Binding FontName}"
+                        ProgressTextPosition="Relative"
+                        ProgressTextOrientation="End"
                         PrimaryTextColor="Black"
                         SecondaryTextColor="White"
                         StartProgressColor="#E7FD8C"
@@ -39,6 +46,9 @@
                 <Grid RowSpacing="10">
                     <Grid.RowDefinitions>
 
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
@@ -76,9 +86,20 @@
                         Maximum="100"/>
                     </StackLayout>
 
+                    <StackLayout Grid.Row="4">
+                        <Label Text="BorderWidth"/>
+                        <Slider
+                        Value="{Binding BorderWidth}"
+                        Minimum="0"
+                        Maximum="300"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="5">
+                        <Label Text="BorderColor"/>
+                        <Entry Text="{Binding BorderColorHex}"/>
+                    </StackLayout>
                 </Grid>
             </ScrollView>
-          
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

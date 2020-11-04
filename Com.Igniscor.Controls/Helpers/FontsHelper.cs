@@ -15,10 +15,10 @@ namespace Com.Igniscor.Controls.Helpers
 
             SKTypeface result;
 
-            var stream = appAssembly.GetManifestResourceStream(appAssembly.GetName().Name +"."+ fullFontName);
+            var stream = appAssembly.GetManifestResourceStream(appAssembly.GetName().Name + "." + fullFontName);
             if (stream == null)
             {
-               result =  AssetsHelper.GetSkiaTypefaceFromAssetFont(fullFontName);
+                result = AssetsHelper.GetSkiaTypefaceFromAssetFont(fullFontName);
             }
             else
             {
@@ -32,14 +32,7 @@ namespace Com.Igniscor.Controls.Helpers
         {
             appAssembly = assembly;
 
-            if(Device.RuntimePlatform == Device.Android)
-            {
-                AssetsHelper = new Android.AssetsHelperService();
-            }
-            else
-            {
-                AssetsHelper = new iOS.AssetsHelperService();
-            }
+            AssetsHelper = DependencyService.Get<IAssetsHelper>();
         }
     }
 }
