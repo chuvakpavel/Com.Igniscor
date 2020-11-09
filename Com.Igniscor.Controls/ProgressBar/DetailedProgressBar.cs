@@ -262,14 +262,14 @@ namespace Com.Igniscor.Controls.ProgressBar
 
         public static readonly BindableProperty BorderColorProperty = BindableProperty.Create(
             nameof(BorderColor),
-            typeof(SKColor),
+            typeof(Color),
             typeof(DetailedProgressBar));
 
-        public SKColor BorderColor
+        public Color BorderColor
         {
             get
             {
-                return (SKColor)GetValue(BorderColorProperty);
+                return (Color)GetValue(BorderColorProperty);
             }
             set
             {
@@ -425,7 +425,7 @@ namespace Com.Igniscor.Controls.ProgressBar
                 innerCornerRadius, BorderWidth, StartProgressColor.ToSKColor(), EndProgressColor.ToSKColor());
 
             DrawBorder(canvas, info, Orientation, ProgressTextOrientation, outerCornerRadius,
-                BorderWidth, textSize, textWidth, BorderColor);
+                BorderWidth, textSize, textWidth, BorderColor.ToSKColor());
 
             canvas.Restore();
             DrawTextWithPosition(canvas, Orientation, ProgressTextPosition, ProgressTextOrientation, FontName, e.Info, percentageWidth, textSize,

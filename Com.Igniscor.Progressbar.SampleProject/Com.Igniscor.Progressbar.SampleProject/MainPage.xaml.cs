@@ -25,5 +25,20 @@ namespace Com.Igniscor.DevProject
         {
             await Navigation.PushAsync(new GradientRadialProgressBarSamplePage());
         }
+
+        private async void Button_Clicked_2(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SamplePage());
+        }
+
+        private async void Button_Clicked_3(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SamplePage2());
+        }
+
+        private async void Button_Clicked_4(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SamplePage3());
+        }
     }
 }

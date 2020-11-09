@@ -6,6 +6,9 @@
     <StackLayout VerticalOptions="Center" Padding="10" Spacing="10">
         <Button Text="Gradient Progress Bar Sample" Clicked="Button_Clicked"/>
         <Button Text="Gradient Radial Progress Bar Sample" Clicked="Button_Clicked_1"/>
+        <Button Text="Sample" Clicked="Button_Clicked_2"/>
+        <Button Text="Sample2" Clicked="Button_Clicked_3"/>
+        <Button Text="Sample3" Clicked="Button_Clicked_4"/>
     </StackLayout>
 
 </ContentPage>

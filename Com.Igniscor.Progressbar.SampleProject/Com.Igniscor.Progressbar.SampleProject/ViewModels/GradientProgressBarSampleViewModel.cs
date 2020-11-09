@@ -1,4 +1,6 @@
 ﻿
+using Xamarin.Forms;
+
 namespace Com.Igniscor.DevProject.ViewModels
 {
     public class GradientProgressBarSampleViewModel : BaseViewModel
@@ -23,11 +25,11 @@ namespace Com.Igniscor.DevProject.ViewModels
                 if (value.Length == 9)
                 {
                     borderColorHex = value;
-                    BorderColor = SkiaSharp.SKColor.Parse(borderColorHex);
+                    BorderColor = Color.FromHex(borderColorHex);
                 }
             }
         }
-        public SkiaSharp.SKColor BorderColor { get; set; }
+        public Color BorderColor { get; set; }
 
         public GradientProgressBarSampleViewModel()
         {
