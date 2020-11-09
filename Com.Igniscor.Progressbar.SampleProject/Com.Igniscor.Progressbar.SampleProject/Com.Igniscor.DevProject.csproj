@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Com.Igniscor.Progressbar" Version="1.0.0" />
     <PackageReference Include="Fody" Version="6.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -32,10 +33,6 @@
 
   <ItemGroup>
     <Folder Include="Converter\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Com.Igniscor.Controls\Com.Igniscor.Controls.csproj" />
   </ItemGroup>
 
   <ItemGroup>
