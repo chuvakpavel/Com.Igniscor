@@ -831,9 +831,9 @@ namespace Com.Igniscor.Controls.ProgressBar
                                 }
                             case ProgressBarTextPosition.Attached:
                                 {
-                                    xText = percentage < textBounds.Width * 1.5f ?
-                                        textSize * 1.5f - textBounds.MidX :
-                                        percentage - textSize * 1.5f - textBounds.MidX;
+                                    xText = percentage < textWidth + textWidth / 4 + borderWidth / 2 * 1.5f ?
+                                        textSize * 1.5f - textWidth / 2 + borderWidth / 2 :
+                                        percentage - textSize * 1.5f - textWidth / 2 + borderWidth / 2;
 
                                     yText = info.Height / 2f - textBounds.MidY;
 
@@ -928,16 +928,16 @@ namespace Com.Igniscor.Controls.ProgressBar
                                     var indent = (info.Width - textWidth) / 2;
                                     if (info.Width - borderWidth > textWidth)
                                     {
-                                        yText = percentage < textSize * 1.5f + borderWidth / 2 ?
-                                        info.Height - textSize / 1.5f - borderWidth / 2 :
-                                        info.Height - percentage + textSize / 1.5f;
+                                        yText = percentage < textSize * 1.5f + borderWidth / 2 - textBounds.Height / 4 ?
+                                        info.Height - textSize / 1.5f - borderWidth / 2 + textBounds.Height / 2 :
+                                        info.Height - percentage + textSize / 1.5f + textBounds.Height / 2;
                                         textPaint.Color = percentage < textBounds.Height * 1.5f ? secondaryColor : primaryColor;
                                     }
                                     else
                                     {
-                                        yText = percentage < textSize * 1.5f + indent ?
-                                        info.Height - textSize / 1.5f - indent :
-                                        info.Height - percentage + textSize / 1.5f;
+                                        yText = percentage < textSize * 1.5f + indent - textBounds.Height / 4 ?
+                                        info.Height - textSize / 1.5f - indent + textBounds.Height / 2 :
+                                        info.Height - percentage + textSize / 1.5f + textBounds.Height / 2;
                                         textPaint.Color = percentage < textBounds.Height * 1.5f ? secondaryColor : primaryColor;
                                     }
                                     break;
