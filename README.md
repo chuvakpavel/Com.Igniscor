@@ -9,9 +9,9 @@
 
 1. [Setup](#Setup)
 1. [Progress bars](#Progress-bars)
-    1. [Detailed progress bar](#Detailed-progress-bar)
-    2. [Radial progress bar](#Radial-progress-bar)
-2. [How it's used](#How-it's-used)
+    - [Detailed progress bar](#Detailed-progress-bar)
+    - [Radial progress bar](#Radial-progress-bar)
+2. [How to use](#How-to-use)
 ---
 ## Setup
 
@@ -266,7 +266,7 @@ EndBackgroundColor="#FB0003"
 ```
 
 ---
-## How it's used
+## How to use
 
 First what you need it's connect namespace to your xaml file.
 ```XAML
