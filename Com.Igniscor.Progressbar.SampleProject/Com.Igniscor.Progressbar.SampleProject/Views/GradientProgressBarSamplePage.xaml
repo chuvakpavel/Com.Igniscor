@@ -20,7 +20,7 @@
                 </Grid.RowDefinitions>
 
                 <gradientProgressBar:DetailedProgressBar
-                    WidthRequest="100"
+                        WidthRequest="100"
                         HorizontalOptions="Center"
                         VerticalOptions="FillAndExpand"
                         Orientation="Vertical"
@@ -30,9 +30,9 @@
                         FontSize="{Binding FontSize}"
                         BorderWidth="{Binding BorderWidth}"
                         BorderColor="{Binding BorderColor}"
-                        FontName="{Binding FontName}"
-                        ProgressTextPosition="Relative"
-                        ProgressTextOrientation="End"
+                        FontName="SansitaSwashed-Regular.ttf"
+                        ProgressTextPosition="Attached"
+                        ProgressTextOrientation="Center"
                         PrimaryTextColor="Black"
                         SecondaryTextColor="White"
                         StartProgressColor="#E7FD8C"

@@ -1,31 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:gradientProgressBar="clr-namespace:Com.Igniscor.Controls.ProgressBar;assembly=Com.Igniscor.Controls"
+             xmlns:viewmodels="clr-namespace:Com.Igniscor.DevProject.ViewModels"
+             xmlns:progressBar="clr-namespace:Com.Controls.RadialProgressBar;assembly=Com.Igniscor.Controls"
              x:Class="Com.Igniscor.DevProject.Views.SamplePage">
+    <ContentPage.BindingContext>
+        <viewmodels:SampleViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout BackgroundColor="#EEEEEEEE">
-            <Frame HeightRequest="50" BackgroundColor="#EEEEEEEE" HasShadow="False">
-            <gradientProgressBar:DetailedProgressBar
-                        x:Name="ProgressBar"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand"
-                        Orientation="Horizontal"
-                        PercentageValue="0.9"
-                        OuterCornerRadius="0"
-                        InnerCornerRadius="0"
-                        FontSize="30"
-                        BorderWidth="15"
-                        BorderColor="#ff000000"
-                        ProgressTextPosition="End"
-                        ProgressTextOrientation="Center"
-                        PrimaryTextColor="Black"
-                        SecondaryTextColor="White"
-                        StartProgressColor="Green"
-                        EndProgressColor="Green"
-                        StartBackgroundColor="White"
-                        EndBackgroundColor="White"/>
-        </Frame>
+            <Frame HeightRequest="500" BackgroundColor="#EEEEEEEE" HasShadow="False" Padding="10" Margin="0">
+                <progressBar:RadialProgressBar
+                    SweepAngle="360"
+                    StartAngle="270"
+                    PercentageValue="{Binding PercentageValue}"
+                    BarWidth="200"
+                    StartColor="Yellow"
+                    EndColor="Red"
+                    StartBackgroundColor="White"
+                    EndBackgroundColor="Black"
+                    WidthRequest="350"
+                    HeightRequest="{Binding Source={RelativeSource Self}, Path=WidthRequest}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="10" />
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

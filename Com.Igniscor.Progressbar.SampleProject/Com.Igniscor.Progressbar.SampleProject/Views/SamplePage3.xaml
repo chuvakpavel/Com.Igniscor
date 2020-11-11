@@ -1,25 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Com.Igniscor.DevProject.ViewModels"
              xmlns:progressBar="clr-namespace:Com.Igniscor.Controls.ProgressBar;assembly=Com.Igniscor.Controls"
              x:Class="Com.Igniscor.DevProject.Views.SamplePage3">
+    <ContentPage.BindingContext>
+        <viewmodels:SampleViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout BackgroundColor="#EEEEEEEE">
             <Frame HeightRequest="50" BackgroundColor="#EEEEEEEE" HasShadow="False" Padding="10"  Margin="0">
                 <progressBar:DetailedProgressBar
-                        x:Name="ProgressBar"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand"
                         Orientation="Horizontal"
-                        PercentageValue="0.9"
+                        PercentageValue="{Binding PercentageValue}"
                         OuterCornerRadius="30"
                         InnerCornerRadius="30"
                         FontSize="15"
                         BorderWidth="0"
                         ProgressTextPosition="Attached"
                         ProgressTextOrientation="Start"
-                        PrimaryTextColor="Black"
-                        SecondaryTextColor="White"
+                        PrimaryTextColor="Orange"
+                        SecondaryTextColor="Orange"
                         StartProgressColor="Orange"
                         EndProgressColor="Orange"
                         StartBackgroundColor="Gray"

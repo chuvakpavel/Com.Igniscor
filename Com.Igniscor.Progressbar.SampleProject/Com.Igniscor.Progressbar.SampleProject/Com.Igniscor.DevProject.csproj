@@ -20,19 +20,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Com.Igniscor.Progressbar" Version="1.0.0" />
     <PackageReference Include="Fody" Version="6.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="PropertyChanged.Fody" Version="3.2.9" />
-    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.1141" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Converter\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Com.Igniscor.Controls\Com.Igniscor.Controls.csproj" />
   </ItemGroup>
 
   <ItemGroup>
