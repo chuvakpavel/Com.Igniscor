@@ -86,6 +86,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Com.Igniscor.Controls\Com.Igniscor.Controls.csproj" />
   </ItemGroup>
 

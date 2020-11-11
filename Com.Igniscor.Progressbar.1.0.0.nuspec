@@ -5,15 +5,26 @@
     <version>1.0.0</version>
     <title>Com.Igniscor.Progressbar</title>
     <authors>Igniscor</authors>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Adds a progress bar with many settings.</description>
+	<owners>Igniscor</owners>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<license type="expression">MIT</license>
+	<licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <description>Com.Igniscor.Progressbar - is a cross platform plugin for Xamarin.Forms which allows you add progress bars with a wide range of customization options that can be shared across iOS and Android.</description>
     <copyright>Copyright 2020</copyright>
     <tags>ios, android, xamarin.forms, SkiaSharp, Progressbar, Igniscor</tags>
-    <repository url="https://github.com/chuvakpavel/Com.Igniscor" />
+	<repository type="git" url="https://github.com/chuvakpavel/Com.Igniscor" />
+	<projectUrl>https://github.com/chuvakpavel/Com.Igniscor</projectUrl>
+	<icon>Igniscor_sign(red).png</icon>
     <dependencies>
-      <group targetFramework="MonoAndroid9.0" />
-      <group targetFramework="Xamarin.iOS1.0" />
-      <group targetFramework=".NETStandard2.0" />
+      <group targetFramework="MonoAndroid9.0">
+		  <dependency id="SkiaSharp.Views.Forms" version="2.80.2" exclude="Build,Analyzers" />
+	  </group>
+      <group targetFramework="Xamarin.iOS1.0">
+		  <dependency id="SkiaSharp.Views.Forms" version="2.80.2" exclude="Build,Analyzers" />
+	  </group>
+      <group targetFramework=".NETStandard2.0">
+		  <dependency id="SkiaSharp.Views.Forms" version="2.80.2" exclude="Build,Analyzers" />
+	  </group>
     </dependencies>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="Java.Interop" targetFramework="MonoAndroid9.0" />
@@ -29,5 +40,6 @@
     <file src="D:\repository\Com.Igniscor.Progressbar\Com.Igniscor.Progressbar.Package\bin\Release\netstandard2.0\Com.Igniscor.Controls.dll" target="lib\netstandard2.0\Com.Igniscor.Controls.dll" />
     <file src="D:\repository\Com.Igniscor.Progressbar\Com.Igniscor.Progressbar.Package\bin\Release\xamarin.ios10\Com.Igniscor.Controls.dll" target="lib\xamarinios10\Com.Igniscor.Controls.dll" />
     <file src="D:\repository\Com.Igniscor.Progressbar\Com.Igniscor.Progressbar.Package\bin\Release\monoandroid90\Com.Igniscor.Controls.dll" target="lib\monoandroid90\Com.Igniscor.Controls.dll" />
-    </files>
+	<file src="Igniscor_sign(red).png" target="" />
+  </files>
 </package>
