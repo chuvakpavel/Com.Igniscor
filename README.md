@@ -8,10 +8,23 @@
 ## Contents
 
 1. [Setup](#Setup)
-1. [Progress bars](#Progress-bars)
+2. [Progress bars](#Progress-bars)
+    - [Percentage value](#Percentage-value)
     - [Detailed progress bar](#Detailed-progress-bar)
+      - [Orientation](#Orientation)
+      - [Border](#Border)
+      - [Text orientation](#Text-orientation)
+      - [Text position](#Text-position)
+      - [Font](#Font)
+      - [Text color](#Text-color)
+      - [Progress bar color](#Progress-bar-color)
+      - [Corner radius](#Corner-radius)
     - [Radial progress bar](#Radial-progress-bar)
-2. [How to use](#How-to-use)
+      - [Bar width](#Bar-width)
+      - [Start angle](#Start-angle)
+      - [Sweep angle](#Sweep-angle)
+      - [Radial progress bar color](#Radial-progress-bar-color)
+3. [How to use](#How-to-use)
 ---
 ## Setup
 
@@ -41,7 +54,29 @@ Orientation="Horizontal"
 ```
 ```XAML
 Orientation="Vertical"
-```                    
+```      
+
+#### Border
+
+You can use a border. This will reduce the size of the progress bar itself. You can also set the color or not set it at all and get a transparent border. The corner radius of the border is anchored to the **Outer corner radius**.
+
+> If your text orientation is center, your border width will be limited by the text size or text width depending on the orientation of the progress bar.
+
+***Border width***
+
+![Alt Text](.README/Gifs/Border.gif)
+
+```XAML
+BorderWidth="20"
+```
+
+***Border color***
+
+![Alt Text](.README/Gifs/BorderWithColor.gif)
+
+```XAML
+BorderColor="Black"
+```              
 
 #### Text orientation
 
@@ -200,27 +235,7 @@ Set corner radius for background.
 OuterCornerRadius="25"
 ```
 
-#### Border
-
-You can use a border. This will reduce the size of the progress bar itself. You can also set the color or not set it at all and get a transparent border. The corner radius of the border is anchored to the **Outer corner radius**.
-
-> If your text orientation is center, your border width will be limited by the text size or text width depending on the orientation of the progress bar.
-
-***Border width***
-
-![Alt Text](.README/Gifs/Border.gif)
-
-```XAML
-BorderWidth="20"
-```
-
-***Border color***
-
-![Alt Text](.README/Gifs/BorderWithColor.gif)
-
-```XAML
-BorderColor="Black"
-```
+:arrow_up: [Contents](#Contents)
 
 ### Radial progress bar
 ![Alt Text](.README/Gifs/RadialProgressBar.gif)
@@ -264,6 +279,8 @@ EndColor="#91C035"
 StartBackgroundColor="#1D00FB"
 EndBackgroundColor="#FB0003"
 ```
+
+:arrow_up: [Contents](#Contents)
 
 ---
 ## How to use
@@ -319,3 +336,5 @@ After what you can use progress bar like that.
 
 Of course you can change the font. You need to add custom font to your cross-platform project. In the example, we used SansitaSwashed-Regular.ttf.
 When adding, set **"Build Action"** to **"Embedded resource"** and **"Copy to Output Directory"** to **"Do not copy"**.
+
+:arrow_up: [Contents](#Contents)
